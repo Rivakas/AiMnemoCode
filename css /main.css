@@ -1,0 +1,336 @@
+/* Nustatome pagrindinį stilių visiems elementams */
+* {
+    margin: 0; /* Panaikina visas išorines paraštes */
+    padding: 0; /* Panaikina visas vidines paraštes */
+    box-sizing: border-box; /* Elementų dydis skaičiuojamas įskaitant padding ir border */
+}
+
+/* Globalūs kintamieji, naudojami visame projekte */
+:root {
+    --index: calc(1vw + 1vh); /* Adaptyvus dydžio vienetas, priklausantis nuo ekrano dydžio */
+    --swiper-theme-color: #4b4d53; /* Slankiklio spalvos tema */
+    --swiper-navigation-size: 30px; /* Slankiklio navigacijos mygtukų dydis */
+    --swiper-navigation-sides-offset: 40px; /* Slankiklio navigacijos mygtukų atitraukimas nuo kraštų */
+    --swiper-pagination-bottom: 20px; /* Slankiklio puslapių indikatoriaus pozicija nuo apačios */
+    --swiper-pagination-color: #afb3c0; /* Aktyvaus indikatoriaus spalva */
+    --swiper-pagination-bullet-inactive-color: #36373c; /* Neaktyvaus indikatoriaus spalva */
+    --swiper-pagination-bullet-inactive-opacity: 1; /* Neaktyvaus indikatoriaus permatomumas */
+}
+
+/* Pagrindinės puslapio spalvos */
+body {
+    background-color: #000; /* Juodas fonas */
+    color: #fff; /* Baltas tekstas */
+}
+
+/* Slankiklio stiliai */
+.slider {
+    height: 100vh; /* Pilnas ekrano aukštis */
+    box-shadow: inset 0 50px 50px #000, inset 0 -50px 50px #000; /* Šešėliai viršuje ir apačioje */
+}
+
+/* Slankiklio skaidrių pozicionavimas */
+.slider .slide {
+    display: flex; /* Lankstusis išdėstymas */
+    align-items: center; /* Centruoja vertikaliai */
+    justify-content: center; /* Centruoja horizontaliai */
+}
+
+/* Skaidrės turinio stiliai */
+.slide__content {
+    text-align: center; /* Tekstas centre */
+    opacity: 0; /* Pradžioje nematomas */
+    transition: opacity .25s ease; /* Sklandus pasirodymas */
+}
+
+/* Aktyvios skaidrės rodymas */
+.swiper-slide-active .slide__content {
+    opacity: 1; /* Matoma aktyvi skaidrė */
+}
+
+/* Skaidrės antraštės stiliai */
+.slide__content h2 {
+    font-size: calc(var(--index) * 3); /* Adaptyvus šrifto dydis */
+    text-transform: uppercase; /* Didžiosios raidės */
+    letter-spacing: calc(var(--index) * 1.65); /* Adaptyvus raidžių tarpas */
+    margin-bottom: calc(var(--index) * 2.3); /* Adaptyvus apatinis tarpas */
+    position: relative; /* Reikalinga linijos pozicionavimui */
+}
+
+/* Dekoratyvinė linija po antrašte */
+.slide__content h2::after {
+    content: ''; /* Tuščias pseudo-elementas */
+    height: 1px; /* Linijos storis */
+    width: 20%; /* Linijos plotis */
+    background-color: rgba(255 255 255 / .35); /* Balta permatoma spalva */
+    position: absolute; /* Absoliutus pozicionavimas */
+    left: 40%; /* Centravimas */
+    bottom: calc(var(--index) * -1); /* Adaptyvus atstumas nuo apačios */
+}
+
+/* Skaidrės paragrafo stiliai */
+.slide__content p {
+    font-size: calc(var(--index) * .9); /* Adaptyvus šrifto dydis */
+    text-transform: uppercase; /* Didžiosios raidės */
+    color: rgba(255 255 255 / .8); /* Šiek tiek permatoma balta spalva */
+    letter-spacing: calc(var(--index) * .24); /* Adaptyvus raidžių tarpas */
+    margin-bottom: calc(var(--index) * 2.6); /* Adaptyvus apatinis tarpas */
+}
+
+/* Mygtuko stiliai */
+button {
+    --button-color: rgba(255 255 255 / .9); /* Mygtuko spalvos kintamasis */
+    padding: 9.25px 40px; /* Vidinis tarpas */
+    font-size: 15.75px; /* Šrifto dydis */
+    border-radius: 10em; /* Apvalūs kampai */
+    background-color: transparent; /* Permatomas fonas */
+    border: 2px solid var(--button-color); /* Baltas rėmelis */
+    color: var(--button-color); /* Baltas tekstas */
+    text-transform: uppercase; /* Didžiosios raidės */
+    letter-spacing: .2rem; /* Raidžių tarpas */
+    cursor: pointer; /* Rodyklės žymeklis */
+}
+
+/* Slankiklio navigacijos mygtukų stiliai */
+.slider-navigation > * {
+    border: 1.5px solid var(--swiper-theme-color); /* Rėmelis */
+    border-radius: 10em; /* Apvalūs kampai */
+    width: 55px; /* Plotis */
+    height: 55px; /* Aukštis */
+}
+
+/* Foninio video stiliai */
+.video-background {
+    position: fixed; /* Fiksuota pozicija */
+    width: 94%; /* Plotis */
+    height: 94%; /* Aukštis */
+    top: 50%; /* Centravimas vertikaliai */
+    left: 50%; /* Centravimas horizontaliai */
+    transform: translate(-50%, -50%); /* Tikslus centravimas */
+    opacity: .7; /* Permatomumas */
+    transition: opacity 2s ease-out; /* Sklandus permatomumo keitimas */
+}
+
+/* Video permatomumo keitimas */
+.video-background.change {
+    opacity: 1; /* Visiškai matomas */
+}
+
+/* Sąsajos elementų stiliai */
+
+/* Konteinerio stiliai */
+.container {
+    margin: auto; /* Automatinis centravimas */
+    max-width: 840px; /* Maksimalus plotis */
+}
+
+/* Viršutinio konteinerio išdėstymas */
+.container-top {
+    display: flex; /* Lankstusis išdėstymas */
+    justify-content: space-between; /* Elementai išdėstyti kraštuose */
+}
+
+/* Viršutinės juostos stiliai */
+.top-line {
+    position: absolute; /* Absoliutus pozicionavimas */
+    width: 100%; /* Pilnas plotis */
+    z-index: 10; /* Virš kitų elementų */
+    padding: 1.7rem 0; /* Viršutinis ir apatinis tarpas */
+}
+
+/* Logotipo stiliai */
+.logo {
+    border: 3px solid #E1E6F7; /* Rėmelis */
+    border-radius: 10em; /* Apvalus rėmelis */
+    width: 54px; /* Plotis */
+    height: 54px; /* Aukštis */
+    display: flex; /* Lankstusis išdėstymas */
+    align-items: center; /* Centravimas vertikaliai */
+    justify-content: center; /* Centravimas horizontaliai */
+    opacity: .75; /* Permatomumas */
+}
+
+/* Logotipo paveiksliuko dydis */
+.logo img {
+    width: 25px; /* Plotis */
+    height: auto; /* Automatinis aukštis */
+}
+
+/* Pagrindinio meniu stiliai */
+.main-mnu {
+    display: flex; /* Lankstusis išdėstymas */
+    margin-top: 15px; /* Viršutinis tarpas */
+    font-size: 19px; /* Šrifto dydis */
+    margin-right: -16px; /* Neigiama paraštė dešinėje */
+}
+
+/* Meniu elementų stiliai */
+.main-mnu li {
+    list-style: none; /* Be sąrašo ženkliukų */
+}
+
+/* Meniu nuorodų stiliai */
+.main-mnu a {
+    color: #bbbec9; /* Šviesiai pilka spalva */
+    padding: 16px; /* Vidinis tarpas */
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; /* Šriftai */
+    text-decoration: none; /* Be pabraukimo */
+    font-weight: 200; /* Plonas šriftas */
+    outline: none; /* Be kontūro */
+}
+
+/* Meniu nuorodų užvedimo efektas */
+.main-mnu a:hover {
+    text-decoration: none; /* Panaikintas pabraukimas užvedus */
+}
+
+/* Puslapio turinio centravimas */
+.content-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    min-height: calc(100vh - 100px);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: calc(15vh); /* Sumažintas tarpas nuo viršaus */
+}
+
+.content-section {
+    text-align: center;
+    width: 100%;
+}
+
+/* Aktyvios nuorodos stilius */
+.main-mnu a {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    padding: 5px 15px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.main-mnu a:hover,
+.main-mnu a.active {
+    color: #fff;
+}
+
+.main-mnu a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: #fff;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: width 0.3s ease;
+}
+
+.main-mnu a:hover::after,
+.main-mnu a.active::after {
+    width: 100%;
+}
+
+/* Logo nuorodos stilius */
+.logo a {
+    text-decoration: none;
+    display: block;
+}
+
+/* Kontaktų formos stiliai */
+.contact-form {
+    max-width: 600px;
+    margin: 30px auto;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: #fff;
+    border-radius: 5px;
+}
+
+.form-group textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+.submit-button {
+    margin-top: 20px;
+}
+
+/* Praktikos puslapio grid išdėstymas */
+.practice-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin: 40px 0;
+}
+
+.practice-item {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 30px;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.practice-item:hover {
+    transform: translateY(-5px);
+}
+
+/* Bendri teksto stiliai */
+h1 {
+    font-size: calc(var(--index) * 2);
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+h2 {
+    font-size: calc(var(--index) * 1.5);
+    margin: 30px 0 20px;
+}
+
+p {
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+/* Stilius mygtukui "IŠBANDYK" */
+.try-button {
+    background-color: rgba(76, 175, 80, 0.5); /* Permatomas fonas */
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    transition: transform 0.3s ease;
+}
+
+.try-button:hover {
+    transform: translateY(-5px); /* Mygtukas pasislenka aukštyn */
+    transition: transform 0.3s ease;
+}
+
+/* Nuorodų stilius */
+a, a:hover {
+    text-decoration: none; /* Pašalina pabraukimą visose būsenose */
+}
