@@ -1,0 +1,136 @@
+<!-- Nurodo naršyklei naudoti naujausią HTML5 versiją -->
+<!DOCTYPE html>
+<!-- Nustato dokumentui lietuvių kalbą -->
+<html lang="lt">
+<!-- Talpina meta informaciją ir išorinius resursus -->
+<head>
+	<!-- Nustato simbolių koduotę UTF-8, kad būtų teisingai rodomi lietuviški simboliai -->
+	<meta charset="UTF-8">
+	<!-- Pritaiko puslapio dydį įrenginio ekranui -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Nustato puslapio pavadinimą naršyklės skirtuke -->
+	<title>AI Mnemonika - Programavimo įsiminimo technikos</title>
+	<!-- Įtraukia GSAP animacijų biblioteką, defer atideda vykdymą iki HTML užkrovimo -->
+	<script src="libs/gsap/gsap.min.js" defer></script>
+	<!-- Įtraukia Swiper.js slankiklio biblioteką -->
+	<script src="libs/swiper/swiper-bundle.min.js" defer></script>
+	<!-- Įtraukia Swiper.js stilius -->
+	<link rel="stylesheet" href="libs/swiper/swiper-bundle.min.css">
+	<!-- Įtraukia pagrindinį stilių failą -->
+	<link rel="stylesheet" href="css/main.css">
+	<!-- Įtraukia pagrindinį JavaScript failą -->
+	<script src="js/app.js" defer></script>
+	<script>
+        // Išjungiame Web3 injekcijas
+        window.ethereum = undefined;
+        
+        // Apsauga nuo inpage.js klaidų
+        window.onerror = function(msg, url) {
+            if (url.includes('inpage.js')) {
+                return true; // Sustabdome klaidos sklaidą
+            }
+        };
+    </script>
+</head>
+<!-- Pradeda puslapio turinio dalį -->
+<body>
+	<!-- Sukuria viršutinę juostą su navigacija -->
+	<div class="top-line">
+		<!-- Centruoja turinį puslapyje -->
+		<div class="container container-top">
+			<!-- Logotipo konteineris -->
+			<div>
+				<!-- Logotipo atvaizdavimo blokas -->
+				<div class="logo">
+					<a href="index.html">
+						<img src="img/logo.svg" alt="AI Mnemonika logotipas">
+					</a>
+				</div>
+			</div>
+			<!-- Navigacijos meniu konteineris -->
+			<div>
+				<!-- Pagrindinio meniu sąrašas -->
+				<ul class="main-mnu">
+					<!-- Meniu punktas - nuoroda į metodų aprašymą -->
+					<li><a href="about.html">Apie metodą</a></li>
+					<!-- Meniu punktas - nuoroda į mnemonikos technikas -->
+					<li><a href="techniques.html">Technikos</a></li>
+					<!-- Meniu punktas - nuoroda į praktines užduotis -->
+					<li><a href="practice.html">Praktika</a></li>
+					<!-- Meniu punktas - nuoroda į kontaktinę informaciją -->
+					<li><a href="contacts.html">Kontaktai</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!-- Sukuria Swiper.js slankiklį -->
+	<div class="swiper slider">
+		<!-- Talpina slankiklio skaidres -->
+		<div class="swiper-wrapper">
+			<!-- Pirma skaidrė apie vizualų kodą -->
+			<div class="swiper-slide slide">
+				<!-- Skaidrės turinio konteineris -->
+				<div class="slide__content">
+					<!-- Skaidrės antraštė -->
+					<h2>Vizualus Mnemokodas</h2>
+					<!-- Skaidrės aprašymas -->
+					<p>AI sukurtos vaizdinės asociacijos programavimo sintaksei</p>
+					<!-- Veiksmo mygtukas -->
+					<button class="try-button">Išbandyk</button>
+				</div>
+			</div>
+			<!-- Antra skaidrė apie istorijų metodą -->
+			<div class="swiper-slide slide">
+				<!-- Skaidrės turinio konteineris -->
+				<div class="slide__content">
+					<!-- Skaidrės antraštė -->
+					<h2>Istorijų Metodas</h2>
+					<!-- Skaidrės aprašymas -->
+					<p>Algoritmai paversti į įsimintinas istorijas</p>
+					<!-- Veiksmo mygtukas -->
+					<button class="try-button">Išbandyk</button>
+				</div>
+			</div>
+			<!-- Trečia skaidrė apie asociacijų žemėlapius -->
+			<div class="swiper-slide slide">
+				<!-- Skaidrės turinio konteineris -->
+				<div class="slide__content">
+					<!-- Skaidrės antraštė -->
+					<h2>Asociacijų Žemėlapiai</h2>
+					<!-- Skaidrės aprašymas -->
+					<p>Programavimo konceptų ryšių vizualizacijos</p>
+					<!-- Veiksmo mygtukas -->
+					<button class="try-button">Išbandyk</button>
+				</div>
+			</div>
+			<!-- Ketvirta skaidrė apie praktinius pratimus -->
+			<div class="swiper-slide slide">
+				<!-- Skaidrės turinio konteineris -->
+				<div class="slide__content">
+					<!-- Skaidrės antraštė -->
+					<h2>Praktiniai Pratimai</h2>
+					<!-- Skaidrės aprašymas -->
+					<p>Interaktyvūs pratimai žinių įtvirtinimui</p>
+					<!-- Veiksmo mygtukas -->
+					<button class="try-button">Išbandyk</button>
+				</div>
+			</div>
+		</div>
+		<!-- Slankiklio navigacijos sekcija -->
+		<div class="slider-bottom">
+			<!-- Skaidrių numeracijos indikatoriai -->
+			<div class="slider-pagination">
+				<!-- Automatiškai generuojami taškai skaidrėms -->
+				<div class="swiper-pagination"></div>
+			</div>
+			<!-- Slankiklio valdymo mygtukai -->
+			<div class="slider-navigation">
+				<!-- Mygtukas grįžti į ankstesnę skaidrę -->
+				<div class="swiper-button-prev"></div>
+				<!-- Mygtukas pereiti į kitą skaidrę -->
+				<div class="swiper-button-next"></div>
+			</div>
+		</div>
+	</div>
+	<!-- Foninis video, kuris sukuria dinamišką foną -->
+	<video src="media/background.mp4" class="video-background" muted></video>

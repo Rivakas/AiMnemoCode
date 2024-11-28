@@ -1,0 +1,111 @@
+<!-- Nurodo naršyklei naudoti naujausią HTML5 versiją -->
+<!DOCTYPE html>
+<!-- Nustato dokumentui lietuvių kalbą -->
+<html lang="lt">
+<!-- Talpina meta informaciją ir išorinius resursus -->
+<head>
+    <!-- Nustato simbolių koduotę UTF-8, kad būtų teisingai rodomi lietuviški simboliai -->
+    <meta charset="UTF-8">
+    <!-- Pritaiko puslapio dydį įrenginio ekranui -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Nustato puslapio pavadinimą naršyklės skirtuke -->
+    <title>Praktika - AI Mnemonika</title>
+    <!-- Įtraukia GSAP animacijų biblioteką -->
+    <script src="libs/gsap/gsap.min.js" defer></script>
+    <!-- Įtraukia Swiper.js slankiklio biblioteką -->
+    <script src="libs/swiper/swiper-bundle.min.js" defer></script>
+    <!-- Įtraukia Swiper.js stilius -->
+    <link rel="stylesheet" href="libs/swiper/swiper-bundle.min.css">
+    <!-- Įtraukia pagrindinį stilių failą -->
+    <link rel="stylesheet" href="css/main.css">
+    <!-- Įtraukia pagrindinį JavaScript failą -->
+    <script src="js/app.js" defer></script>
+</head>
+<!-- Pradeda puslapio turinio dalį -->
+<body>
+    <!-- Sukuria viršutinę juostą su navigacija -->
+    <div class="top-line">
+        <!-- Centruoja turinį puslapyje -->
+        <div class="container container-top">
+            <!-- Logotipo konteineris -->
+            <div>
+                <!-- Logotipo atvaizdavimo blokas su nuoroda į pagrindinį puslapį -->
+                <div class="logo">
+                    <a href="index.html">
+                        <!-- Svetainės logotipo paveiksliukas -->
+                        <img src="img/logo.svg" alt="AI Mnemonika logotipas">
+                    </a>
+                </div>
+            </div>
+            <!-- Navigacijos meniu konteineris -->
+            <div>
+                <!-- Pagrindinio meniu sąrašas -->
+                <ul class="main-mnu">
+                    <!-- Meniu punktas - nuoroda į metodų aprašymą -->
+                    <li><a href="about.html">Apie metodą</a></li>
+                    <!-- Meniu punktas - nuoroda į mnemonikos technikas -->
+                    <li><a href="techniques.html">Technikos</a></li>
+                    <!-- Meniu punktas - nuoroda į praktines užduotis (aktyvi) -->
+                    <li><a href="practice.html" class="active">Praktika</a></li>
+                    <!-- Meniu punktas - nuoroda į kontaktinę informaciją -->
+                    <li><a href="contacts.html">Kontaktai</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pagrindinio turinio konteineris -->
+    <div class="container content-container">
+        <!-- Puslapio pagrindinis pavadinimas -->
+        <h1>Praktiniai Pratimai</h1>
+        <!-- Turinio sekcija -->
+        <div class="content-section">
+            <!-- Interaktyvių pratimų sekcijos pavadinimas -->
+            <h2>Interaktyvūs Pratimai</h2>
+            <!-- Pratimų aprašymas -->
+            <p>Išbandykite mūsų interaktyvius pratimus, kurie padės įtvirtinti programavimo žinias:</p>
+            
+            <!-- Pratimų tinklelis -->
+            <div class="practice-grid">
+                <!-- Pirmas pratimas - Sintaksės treniruotė -->
+                <div class="practice-item">
+                    <!-- Pratimo pavadinimas -->
+                    <h3>Sintaksės Treniruotė</h3>
+                    <!-- Pratimo aprašymas -->
+                    <p>Praktikuokitės rašyti kodą naudodami vizualias asociacijas</p>
+                    <!-- Pratimo pradžios mygtukas -->
+                    <button class="practice-button">Pradėti</button>
+                </div>
+                
+                <!-- Antras pratimas - Algoritmų istorijos -->
+                <div class="practice-item">
+                    <!-- Pratimo pavadinimas -->
+                    <h3>Algoritmų Istorijos</h3>
+                    <!-- Pratimo aprašymas -->
+                    <p>Mokykitės algoritmus per istorijas ir vizualizacijas</p>
+                    <!-- Pratimo pradžios mygtukas -->
+                    <button class="practice-button">Pradėti</button>
+                </div>
+                
+                <!-- Trečias pratimas - Konceptų žemėlapiai -->
+                <div class="practice-item">
+                    <!-- Pratimo pavadinimas -->
+                    <h3>Konceptų Žemėlapiai</h3>
+                    <!-- Pratimo aprašymas -->
+                    <p>Tyrinėkite programavimo konceptų ryšius</p>
+                    <!-- Pratimo pradžios mygtukas -->
+                    <button class="practice-button">Pradėti</button>
+                </div>
+            </div>
+            
+            <!-- Progreso sekimo sekcija -->
+            <h2>Progreso Sekimas</h2>
+            <!-- Progreso sekimo aprašymas -->
+            <p>Sekite savo mokymosi progresą ir gaukite personalizuotas rekomendacijas tolimesniam mokymuisi.</p>
+        </div>
+    </div>
+
+    <!-- Puslapio fono sluoksnis -->
+    <div class="layer"></div>
+</body>
+</html>
